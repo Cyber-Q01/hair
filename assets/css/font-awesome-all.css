@@ -361,8 +361,7 @@ readers do not read off random characters that represent icons */
 .fa-arrow-right:before {
   content: "\f061"; }
 
-.fa-arrow-up:before {
-  content: "\f062"; }
+
 
 .fa-arrows-alt:before {
   content: "\f0b2"; }
