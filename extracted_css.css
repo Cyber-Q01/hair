@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  src: ;
+  src:  format("embedded-opentype"),  format("woff2"),  format("woff"),  format("truetype"),  format("svg"); }
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  src: ;
+  src:  format("embedded-opentype"),  format("woff2"),  format("woff"),  format("truetype"),  format("svg"); }
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  src: ;
+  src:  format("embedded-opentype"),  format("woff2"),  format("woff"),  format("truetype"),  format("svg"); }
+@font-face {
+  font-family: "Flaticon";
+  src: ;
+  src:  format("embedded-opentype"),
+        format("woff2"),
+        format("woff"),
+        format("truetype"),
+        format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
