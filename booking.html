@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="description"
-        content="Welly beauty is more than a salon; it's a community, a commitment to excellence, and a celebration of individuality through braided artistry. Join us on this journey of self-expression and self-care. Book your session, connect with us, and let Blessing and her team redefine your hairstyling experience ." />
-    <title>Booking - Welly beauty</title>
+    <meta name="description" content="Blessing Your Scalp is more than a salon; it's a community, a commitment to excellence, and a celebration of individuality through braided artistry. Join us on this journey of self-expression and self-care. Book your session, connect with us, and let Blessing and her team redefine your hairstyling experience .">
+    <title>Booking - Blessing Your Scalp</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <link href="/css2" rel="stylesheet">
+    <link href="/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/boxicons.min.css">
 
 
     <!-- Stylesheets -->
-    <link href="/assets/css/font-awesome-all.css" rel="stylesheet">
+     <link href="/assets/css/font-awesome-all.css" rel="stylesheet">
     <link href="/assets/css/flaticon.css" rel="stylesheet">
     <link href="/assets/css/owl.css" rel="stylesheet">
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -34,7 +29,7 @@
     <link href="/assets/css/calendar.css" rel="stylesheet">
 
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+    <script src="./scripts/twk-main.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-vendor.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-chunk-vendors.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-chunk-common.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-runtime.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-app.js" charset="UTF-8" crossorigin="*"></script><script async src="/67fcce1b03705119092a6d7e/1iopoa7g8" charset="UTF-8" crossorigin="*"></script><script type="text/javascript">
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date();
         (function() {
@@ -48,7 +43,7 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
+    <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
     <style>
         .marked-date a .ui-state-default {
             background-color: #ffcccb !important;
@@ -91,7 +86,82 @@
         }
     </style>
 
-</head>
+<style>/* Make clicks pass-through */
+
+    #nprogress {
+      pointer-events: none;
+    }
+
+    #nprogress .bar {
+      background: var(--livewire-progress-bar-color, #29d);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+    }
+
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
+
+    /* Remove these to get rid of the spinner */
+    #nprogress .spinner {
+      display: block;
+      position: fixed;
+      z-index: 1031;
+      top: 15px;
+      right: 15px;
+    }
+
+    #nprogress .spinner-icon {
+      width: 18px;
+      height: 18px;
+      box-sizing: border-box;
+
+      border: solid 2px transparent;
+      border-top-color: var(--livewire-progress-bar-color, #29d);
+      border-left-color: var(--livewire-progress-bar-color, #29d);
+      border-radius: 50%;
+
+      -webkit-animation: nprogress-spinner 400ms linear infinite;
+              animation: nprogress-spinner 400ms linear infinite;
+    }
+
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .spinner,
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
+
+    @-webkit-keyframes nprogress-spinner {
+      0%   { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes nprogress-spinner {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+    </head>
 
 
 <!-- page wrapper -->
@@ -137,7 +207,7 @@
         <!-- preloader end -->
 
         <!-- main header -->
-        <header class="main-header style-two">
+        <header class="main-header style-two fixed-header">
 
             <div class="auto-container">
                 <!-- header-upper -->
@@ -150,14 +220,14 @@
                                 <a href="mailto: config('app.email') }}"> config('app.email') }}</a>
                             </div>
                         </div> -->
-                        <figure class="logo-box"><a href="/"><img src="/assets/images/logo-2.png" alt=""></a></figure>
+                        <figure class="logo-box"><a href="/"><img src="./assets/images/logo-2.png" alt=""></a></figure>
                         <div class="phone-box info-box">
                             <div class="inner">
                                 <i class="flaticon-phone"></i>
                                 <p>Phone</p>
-                                <a href="tel: config('app.phone')">+4407578999140</a>
+                                <a href="#">+4407578999140</a>
                                 <i class="flaticon-address"></i>
-                                <p class="mt-1"> <a href="#">📍LOCATION :31 AGNES ROAD, BARNSLEY S70 1NJ</a></p>
+                                <p class="mt-1"><a href="#">📍LOCATION :31 AGNES ROAD, BARNSLEY S70 1NJ</a></p>
                                 
                             </div>
                         </div>
@@ -177,21 +247,17 @@
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li
-                                            class="">
-                                            <a href="/">Home</a>
+                                        <li>
+                                            <a href="/index.html">Home</a>
                                         </li>
-                                        <li
-                                            class="">
-                                            <a href="/about">About </a>
+                                        <li>
+                                            <a href="#">About </a>
                                         </li>
-                                        <li
-                                            class="">
-                                            <a href="/service.html">Services</a>
+                                        <li>
+                                            <a href="./service.html">Services</a>
                                         </li>
-                                        <li
-                                            class="current">
-                                            <a href="/booking">Booking</a>
+                                        <li class="current">
+                                            <a href="./booking.html">Booking</a>
                                         </li>
                                         <li><a href="/#contact">Contact</a></li>
                                     </ul>
@@ -209,6 +275,24 @@
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->
+                            
+                                <!-- <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li>
+                                            <a href="./index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">About </a>
+                                        </li>
+                                        <li>
+                                            <a href="./service.html">Services</a>
+                                        </li>
+                                        <li class="current">
+                                            <a href="./booking.html">Booking</a>
+                                        </li>
+                                        <li><a href="/#contact">Contact</a></li>
+                                    </ul>
+                                </div> -->
                             </nav>
 
                         </div>
@@ -223,19 +307,35 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><i class="fas fa-times"></i></div>
 
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="/"><img src="/assets/images/logo-2.png" alt="" title=""></a></div>
+            <nav class="menu-box mCustomScrollbar _mCS_1"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 679px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: -86px; left: 0px;" dir="ltr">
+                <div class="nav-logo"><a href="/"><img src="./images/logo-2.png" alt="" title="" class="mCS_img_loaded"></a></div>
                 <div class="menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-                </div>
+                
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li>
+                                            <a href="/index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">About </a>
+                                        </li>
+                                        <li>
+                                            <a href="./service.html">Services</a>
+                                        </li>
+                                        <li class="current">
+                                            <a href="./booking.html">Booking</a>
+                                        </li>
+                                        <li><a href="/#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><a
-                                href="tel:+4407578999140">+4407578999140</a>
+                        <li><a href="#">+4407578999140</a>
                         </li>
-                        <li><a
-                                href="mailto:support@wellybeauty.co.uk">support@wellybeauty.co.uk</a>
+                        <li><a href="mailto:support@wellybeauty.co.uk.html">support@wellybeauty.co.uk</a>
                         </li>
                     </ul>
                 </div>
@@ -248,11 +348,11 @@
                         <li><a href="/"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
-            </nav>
+            </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 0px; height: 0px; top: 0px; display: block;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 0px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></nav>
         </div><!-- End Mobile Menu -->
 
         <!--Page Title-->
-<section class="page-title centred" style="background-image: url(/assets/images/background/page-title.jpg);">
+<section class="page-title centred" style="background-image: url(./images/page-title.jpg);">
     <div class="auto-container">
         <div class="title-box">
             <span class="title-text">Appointments</span>
@@ -268,24 +368,24 @@
             <div class="col-lg-12 col-md-12 col-sm-12 content-side">
                 <div class="blog-details-content">
                     <div class="author-box bg-color-1">
-                        <div class="">
+                        <div>
                             <h2>
                                 <strong>HEY Girlies,</strong>
                             </h2>
                             <p>Now that you have clicked, it is important to note before making your booking that: </p>
                             <ul>
                                 <li><b> We are open 6 days every week.</b></li>
-                                <Li><b> You can grab slots from 7am- 3pm. Appointments from 4pm are considered squeeze in appointment and will require a £15 fee</b></li>
+                                <li><b> You can grab slots from 7am- 3pm. Appointments from 4pm are considered squeeze in appointment and will require a £15 fee</b></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="inner-box  ">
+                    <div class="inner-box">
                         <h3>Please Read Before Booking</h3>
                         <div class="text">
                             <p>To ensure your appointment goes smoothly, we kindly ask you to read and agree to our
                                 policy before booking.
                             </p>
-                            <a href="/policy" class="theme-btn-one">Click Here To Read Our Policy</a>
+                            <a href="#" class="theme-btn-one">Click Here To Read Our Policy</a>
                         </div>
                     </div>
                 </div>
@@ -301,8 +401,8 @@
             <h2>Choose Category</h2>
         </div>
         <div class="row clearfix" id="hair_styles">
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:1,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[1,2,3,4,5],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;tB1NSebTq3gv1LSRpKWv&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;70c18c019eb7c6e7ec5362d28ed35c22862b8f5a365636f857c03b9411724148&quot;}" wire:effects="[]" wire:id="tB1NSebTq3gv1LSRpKWv" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="BkxFiUZurSfBzI9sshof" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -312,11 +412,126 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/rwf8df9dzykbuhdhn2jm" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Jumbo Knotless Braids/Twist (4 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Large – Waist Length - 4hrs<span> £100</span></li>
+                                                                <li>Large – Bum Length - 4hrs<span> £120</span></li>
+                                                                <li>Large –  thigh Length - 4hrs<span> £120</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=1" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/raae9feiig6iepvcui53" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Medium Knotless Braids/Twist (7 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Medium – Bob Length - 3hrs<span> £80</span></li>
+                                                                <li>Medium - Mid-Back Length - 4hrs<span> £95</span></li>
+                                                                <li>Medium – Waist Length - 5hrs<span> £125</span></li>
+                                                                <li>Medium – Bum Length - 6hrs<span> £140</span></li>
+                                                                <li>Medium- Thigh Length - 7hrs<span> £180</span></li>
+                                                                <li>Medium- Knee Length - 8hrs<span> £200</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=2" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!-- [if BLOCK]><![endif]                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/yxgtwaxwlunbkgqst6nh" height="400px"> -->
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small - Medium Knotless Braids/Twist (8 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Smedium – Bob - 4hrs<span> £90</span></li>
+                                                                <li>Smedium - Mid-Back Length - 5hrs<span> £115</span></li>
+                                                                <li>Smedium – Waist Length - 7hrs<span> £150</span></li>
+                                                                <li>Smedium – Bum Length - 8hrs<span> £165</span></li>
+                                                                <li>Smedium – Thigh Length - 200hrs<span> £175</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=3" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!-- [if BLOCK]><![endif]                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/wmjh2ozimd4aqrhhvjbz" height="400px"> -->
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Knotless Braids/Twist (10 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Small – Bob - 5hrs<span> £110</span></li>
+                                                                <li>Small – Mid-Back Length - 7hrs<span> £150</span></li>
+                                                                <li>Small- Waist Length - 9hrs<span> £195</span></li>
+                                                                <li>Small – Bum Length - 10hrs<span> £215</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=4" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!-- [if BLOCK]><![endif]                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/xcrujoqa2nly00r1gmvt" height="400px"> -->
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>X-Small Knotless Braids/Twist (12-13 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>X-Small – Bob - 7hrs<span> £140</span></li>
+                                                                <li>X-Small – Mid-Back Length  - 9hrs<span> £190</span></li>
+                                                                <li>X-Small- Waist Length - 11hrs<span> £255</span></li>
+                                                                <li>X-Small – Bum Length - 12hrs<span> £280</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=5" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:2,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[13,14,15,39],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;v2Hymg1HJhe9ehYuf1f2&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;94a902553ae32d37b7db84ed9bce0e85a11cd8ee2fd6a85e3099956b3b3e3a95&quot;}" wire:effects="[]" wire:id="v2Hymg1HJhe9ehYuf1f2" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="ugLA6Eb7PmEEG9mTCfA4" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -326,11 +541,96 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/tqlzeb1kdssr4yp28nqt" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Spring Twist/Passion Twist (10 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Small - Mid-Back Length - 6hrs<span> £140</span></li>
+                                                                <li>Small - Waist Length - 7hrs<span> £160</span></li>
+                                                                <li>Small - Bum Length - 8hrs<span> £175</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=13" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/wzh7bpgucmkmdurmhvqi" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small - Medium Passion Twist (8 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Smedium - Mid-Back Length - 5hrs<span> £120</span></li>
+                                                                <li>Smedium – Waist Length - 6hrs<span> £140</span></li>
+                                                                <li>Smedium – Bum Length - 6hrs<span> £150</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=14" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/wjcbw5j4fn98tri4kcxl" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Medium Spring Twist/Passion Twist (7 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Medium – waist length - 4hrs<span> £120</span></li>
+                                                                <li>Medium – bum length - 5hrs<span> £130</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=15" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/xmsocasp1kf4vhngvvps" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Mini Twists with extension</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Mini twist with extension - This does not include price of extension - 7hrs<span> £150</span></li>
+                                                                <li>Mini twist with extension -  12/13 rows This does not include price of extension - 8hrs<span> £170</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=39" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:3,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[6,7,8,30,31],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;gHUQchsPu6l5loshLYAf&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;fd7730454aee9e9211dc96dbfc5db13ea733080a94b614cf5241b4f0d6a19e51&quot;}" wire:effects="[]" wire:id="gHUQchsPu6l5loshLYAf" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="r3jrPlfxud8bqUaA2mxx" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -340,11 +640,111 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/uucl5ztaoujczcp6sk1v" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Soft Locs</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Locs  - 5hrs<span> £100</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=6" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/mzv7su0mnswiu9i0fdlx" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Butterfly Locs – All In Small Medium </h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Locs Bob length - The butterfly is created from scratch and not premade. Premade butterfly locs will be booked under soft locs - 6hrs<span> £120</span></li>
+                                                                <li>Locs  mid back length - The butterfly is created from scratch and not premade. Premade butterfly locs will be booked under soft locs - 7hrs<span> £150</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=7" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/xzfbu1hq3rwylazdpqzr" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Micro Twist</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Micro Twists - 11hrs<span> £300</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=8" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/s8ksuapktvbrbu8vtjym" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Marley Twists</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Medium Marley Twists - 6hrs<span> £120</span></li>
+                                                                <li>Marley Twist - 22/24 inch  - 6hrs<span> £140</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=30" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hair_style/svxpwyenqmudsuww5sow" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Invisible Twists</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Invisible Twist - 5hrs<span> £120</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=31" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:4,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[9,10,11,12,27,29],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;WMqP2SIK0K7eVj4LqEht&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;0a4ecf72a29c2f27814ff9513be7758110ec3377270d395a17bd08207d2bb20e&quot;}" wire:effects="[]" wire:id="WMqP2SIK0K7eVj4LqEht" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="XdWRRe0I60a5Cd2Skaci" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -354,11 +754,142 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/p1zchkvouhciohpopocg" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Stitch Braids: All Length</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>6 Stitch Braids - 3hrs<span> £70</span></li>
+                                                                <li>8 Stitch Braids - 3hrs<span> £80</span></li>
+                                                                <li>10-12 Feed-In Braids - 4hrs<span> £90</span></li>
+                                                                <li>20-24 Feed-In Braids - 6hrs<span> £125</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=9" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/mok02juor4vdbjuxvnlo" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Medium Tribal/Fulani Braids</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Mid - Back Length - 5hrs<span> £100</span></li>
+                                                                <li>Waist Length - 6hrs<span> £120</span></li>
+                                                                <li>Bum Length - 7hrs<span> £140</span></li>
+                                                                <li>Medium – Bob Length - 4hrs<span> £90</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=10" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/nphpjygnyrvrafmnkao3" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Medium/Fulani Braids</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Mid - Back Length - 6hrs<span> £120</span></li>
+                                                                <li>Waist Length - 7hrs<span> £140</span></li>
+                                                                <li>Bum Length - 8hrs<span> £150</span></li>
+                                                                <li>Thigh Length - 8hrs<span> £170</span></li>
+                                                                <li>Smedium – bob length - 5hrs<span> £110</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=11" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/t5wazswofc5dnq19krn7" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Tribal/Fulani Braids</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Mid - Back Length - 7hrs<span> £135</span></li>
+                                                                <li>Waist Length - 8hrs<span> £150</span></li>
+                                                                <li>Bum Length - 8hrs<span> £160</span></li>
+                                                                <li>Thigh Length - 9hrs<span> £180</span></li>
+                                                                <li>Small  – Bob - 6hrs<span> £125</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=12" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hair_style/x09oacmfxgpbbpgitdam" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Alicia Keys Braids</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Alicia Keys Braid - 5hrs<span> £115</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=27" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/wqars0cmfayykhf8esky" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Braided Ponytail</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Feedin Ponytail - 7hrs<span> £140</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=29" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:5,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[25,26],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;HrrnLjcUZIY9yK48eWOJ&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;e32564746b30b185cf1d5e832b76c2fb5be5508fa8df92b99562d88ed33df261&quot;}" wire:effects="[]" wire:id="HrrnLjcUZIY9yK48eWOJ" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="D5EAz3pD16eI5O2rNWkG" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -368,11 +899,52 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/emh1vdb7tm5u7betci3b" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small </h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Half Up/ Half Weave - 5hrs<span> £110</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=25" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/lxl00m9tvcdlsrrqk9wi" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Medium</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Half Up/ Half Weave - 4hrs<span> £100</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=26" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:6,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[21,22,23,24],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;xC15RBNCYv7qgFFzHWq2&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;330f357ea1024dc7b7f78444e38e906b4f15fa835f987ad8ae5aec82080ff7bc&quot;}" wire:effects="[]" wire:id="xC15RBNCYv7qgFFzHWq2" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="OielYYeVd8sFlmquIOUO" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -382,11 +954,90 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/xbpopmwh9qfqway4a4s3" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Pop Smoke Braid</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Men Braids - 2hrs<span> £50</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=21" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/q1fw1apoxdqjxf7yfuyt" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Stitch Braids</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Men Braids - 2hrs<span> £50</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=22" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/ogjo4o0edqol0g9exscc" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Single Twists/Braids (full head)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Men Braids - 3hrs<span> £60</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=23" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/swjvudgdae4fvskvd0ka" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Single Twists/Braids (side cut)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Men Braids - 2hrs<span> £40</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=24" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:8,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[17,18,19],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;IpCSyqqCBCogBT2rDQKN&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;94034cd009de05c09d9f668758b403c077f3106b099b21dcedbe6508cf7b6c45&quot;}" wire:effects="[]" wire:id="IpCSyqqCBCogBT2rDQKN" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="CsmUhzD83fOp0q1ohLPm" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -396,11 +1047,71 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/dytuxxf1vyxj5763r4g5" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Medium French Curls (8 rows) </h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>French Curls  - 7hrs<span> £150</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=17" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/q0hixwzomdzs2rfxbgjy" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small French Curls - 10 rows</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>French Curls 24 inches - 8hrs<span> £185</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=18" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/swy7415cp5jsi5zibzsv" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small  French Curls - 11 Rows</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>French Curls 24 inches - 9hrs<span> £200</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=19" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:9,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[28,33,34],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;GRNjBoWBFvzUvz2TYRXx&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;795c2eb4c7007215d9180884ddf2807ef99bdc16e2bcb44c26585d5e4f7762aa&quot;}" wire:effects="[]" wire:id="GRNjBoWBFvzUvz2TYRXx" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="SQIdpAfKLquRqY4Qh1ez" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -410,11 +1121,80 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/hadjc0gwbjzuvujfv8kq" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Boho Braids  (10 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Small Bum Length - 8hrs<span> £200</span></li>
+                                                                <li>Mid-Back Length - 7hrs<span> £155</span></li>
+                                                                <li>Bob Length - 7hrs<span> £135</span></li>
+                                                                <li>Waist Length - 7hrs<span> £185</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=28" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hair_style/svkotpd5txnaa4cslrzo" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Smedium –  Boho Braids  (8 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Bum Length - 7hrs<span> £185</span></li>
+                                                                <li> Mid-Back Length - 6hrs<span> £140</span></li>
+                                                                <li>Bob Length - 5hrs<span> £110</span></li>
+                                                                <li>Waist Length - 7hrs<span> £170</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=33" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/rolidsm98dfxxpbcrnly" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Medium Boho Braids (7 Rows)</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Medium Boho Bob  - 4hrs<span> £100</span></li>
+                                                                <li>Mid back length  - 5hrs<span> £115</span></li>
+                                                                <li>Waist length  - 6hrs<span> £150</span></li>
+                                                                <li>Bum length  - 7hrs<span> £165</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=34" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:10,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[35,36,37,38,40],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;CPRALM8tiUHcjtb0WXg7&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;e86212c2e50d6a2a1bb1ca9d10b3835595621fa1a9379cd96e35f5cf51955e30&quot;}" wire:effects="[]" wire:id="CPRALM8tiUHcjtb0WXg7" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="7U7zhXhcvQP0wVta6zR2" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -424,11 +1204,108 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hair_style/fkhd943h9ofxuxpv0q6l" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Corn rows for wig</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Natural Hair Styles - 1hrs<span> £30</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=35" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hair_style/cmdcrnr3drrzisq24z1b" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Cornrows</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Natural Hair Styles - 2hrs<span> £45</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=36" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hairstyle/hxvjnhihblf5btwxth1o" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Mini Twists</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Natural Hair Styles - 6hrs<span> £120</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=37" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]-->                            <img src="/dv5ppsdif/image/upload/v1/hair_style/yrxon73ml3oypccw1wqg" height="400px">
+                            <!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Small Twists</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Natural Hair Styles - 3hrs<span> £80</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=38" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Micro twist - natural hair </h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Micro twists - 8hrs<span> £200</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=40" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
-                            <div wire:snapshot="{&quot;data&quot;:{&quot;category&quot;:[null,{&quot;class&quot;:&quot;App\\Models\\HairCategory&quot;,&quot;key&quot;:11,&quot;s&quot;:&quot;mdl&quot;}],&quot;hairStyles&quot;:[null,{&quot;keys&quot;:[41,42,43,44,45],&quot;class&quot;:&quot;Illuminate\\Database\\Eloquent\\Collection&quot;,&quot;modelClass&quot;:&quot;App\\Models\\Hairstyle&quot;,&quot;s&quot;:&quot;elcln&quot;}],&quot;show&quot;:false,&quot;addons&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;kESzmPBeHfJT3igAC68Q&quot;,&quot;name&quot;:&quot;website.booking&quot;,&quot;path&quot;:&quot;booking&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;ccd97b51d15c0785c54ae62521c7ac66b14efadcea3e03d45ae91837f28440ee&quot;}" wire:effects="[]" wire:id="kESzmPBeHfJT3igAC68Q" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
-        <div class="service-block-one" >
+                            <div wire:id="BLxs9wjwCQ77yAjrXc5U" class="col-lg-12 col-md-12 col-sm-12 service-block mb-4" wire:click="$toggle('show')">
+        <div class="service-block-one">
             <div class="inner-box">
                 <div class="lower-content">
                     <span class="price">
@@ -438,7 +1315,100 @@
                 </div>
             </div>
         </div>
-        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <!--[if BLOCK]><![endif]-->        <div class="row clearfix mt-3">
+            <!--[if BLOCK]><![endif]-->            <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>2x6 Closure Sew-In</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>2*6 Closure  - 4hrs<span> £80</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=41" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Leave Out Sew-In</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Leave Out  - 4hrs<span> £70</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=42" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Mini Frontal sew-in - 4*4 5*5 6*6 7*7 closures</h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Mini Frontal  - 4hrs<span> £80</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=43" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Versatile Sew-In </h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li> Versatile Sew-In - 4hrs<span> £85</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=44" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 small-column mt-2">
+                <div id="content_block_4">
+                    <div class="content-box">
+                        <div class="service-box">
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                           
+                            <h3>Wigging </h3>
+                            <ul class="list clearfix">
+                                <!--[if BLOCK]><![endif]-->                                <li>Frontal and closure wigging  - 3hrs<span> £65</span></li>
+                                <!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+                        </div>
+                        <div class="btn-box">
+                            <a href="calendar.html?service_id=45" class="theme-btn-one">Book Now </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--[if ENDBLOCK]><![endif]-->
+        </div>
+        <!--[if ENDBLOCK]><![endif]-->
     </div>
 
                     </div>
@@ -449,7 +1419,7 @@
         <!-- main-footer -->
         <footer class="main-footer">
             <div class="footer-top">
-                <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-6.png);"></div>
+                <div class="pattern-layer" style="background-image: url(./images/shape-6.png);"></div>
                 <div class="auto-container">
                     <div class="widget-section">
                         <div class="row clearfix">
@@ -462,7 +1432,7 @@
                                     <div class="widget-content">
                                         <ul class="links-list clearfix">
                                             <li><a href="/#about">About</a></li>
-                                            <li><a href="/booking">Booking</a></li>
+                                            <li><a href="./booking.html">Booking</a></li>
                                             <li><a href="/#services">Services</a></li>
 
                                         </ul>
@@ -478,14 +1448,12 @@
                                         <ul class="info-list clearfix">
                                             <li>
                                                 <i class="flaticon-phone-call"></i>
-                                                <p><a
-                                                        href="tel:+4407578999140">+4407578999140</a>
+                                                <p><a href="#">+4407578999140</a>
                                                 </p>
                                             </li>
                                             <li>
                                                 <i class="flaticon-email-2"></i>
-                                                <p><a
-                                                        href="mailto:support@wellybeauty.co.uk">support@wellybeauty.co.uk</a>
+                                                <p><a href="mailto:support@wellybeauty.co.uk.html">support@wellybeautyafrica.co.uk</a>
                                                 </p>
                                             </li>
 
@@ -501,10 +1469,10 @@
                                     <section class="contact-section" style="padding-top: 10px; padding-bottom: 10px;">
                                         <div class="content-box">
                                             <ul class="social-links clearfix">
-                                                <li><a href="https://www.instagram.com/blessingyourscalp/">
+                                                <li><a href="#">
                                                         <i class="fab fa-instagram"></i></a>
                                                 </li>
-                                                <li><a href="https://www.tiktok.com/@blessingyourscalp?_t=8kEkEjVcyEH&_r=1"><i class='bx bxl-tiktok'></i></a></li>
+                                                <li><a href="#"><i class="bx bxl-tiktok"></i></a></li>
                                             </ul>
                                         </div>
                                     </section>
@@ -517,8 +1485,7 @@
             <div class="footer-botton">
                 <div class="auto-container clearfix">
                     <div class="copyright pull-left">
-                        <p>&copy; Copyright 2025 by <a
-                                href="/">Welly beauty</a></p>
+                        <p>© Copyright 2025 by <a href="/">Blessing Your Scalp</a></p>
                     </div>
 
                 </div>
@@ -528,14 +1495,14 @@
 
 
         <!--Scroll to top-->
-        <button class="scroll-top scroll-to-target" data-target="html">
+        <button class="scroll-top scroll-to-target open" data-target="html">
             <span class="fa fa-arrow-up"></span>
         </button>
     </div>
 
 
     <!-- jequery plugins -->
-    <script src="/assets/js/jquery.js"></script>
+   <script src="/assets/js/jquery.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
         integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
@@ -555,11 +1522,11 @@
     <script src="/assets/js/bxslider.js"></script>
 
     <!-- Livewire Scripts -->
-<script src="/livewire/livewire.js?id=02b08710"   data-csrf="5sfdRsC9AH8u5gXwXe7lIG8qcCPtiAfZvv6W5OHV" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+<script src="./scripts/livewire.js" data-csrf="6cgxb4y9RRiIWGDwkF5FIXuYEgC68UGVL5CEiFHs" data-update-uri="/livewire/update" data-navigate-once="true"></script>
     <!-- main-js -->
-    <script src="/assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 
-</body>
 
-</html>
+
+</body></html>
