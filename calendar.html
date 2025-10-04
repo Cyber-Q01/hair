@@ -71,7 +71,7 @@
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li class=""><a href="/">Home</a></li>
-                                        <li class=""><a href="/about">About </a></li>
+                                        <li class=""><a href="#">About </a></li>
                                         <li class=""><a href="/service.html">Services</a></li>
                                         <li class="current"><a href="/booking.html">Booking</a></li>
                                         <li><a href="/#contact">Contact</a></li>
@@ -128,19 +128,23 @@
             </div>
         </section>
 
-        <section class="service-section bg-color-1">
+        <section class="service-section bg-color-1" style="padding: 120px 0;">
             <div class="auto-container">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
                         <div id="datepicker"></div>
                     </div>
-                    <div class="col-md-6">
-                        <h3>Available Time Slots</h3>
-                        <div id="time-slots">
+                    <div class="col-md-5">
+                        <div class="time-slots-container">
+                            <h3 id="selected-date-heading">Select Time for selected date</h3>
+                            <p>TIME ZONE: LONDON (GMT)</p>
+                            <div class="time-slots" id="time-slots">
+                                <!-- Time slots will be dynamically inserted here -->
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-4">
+                <div class="text-center mt-5">
                     <button id="next-btn" class="theme-btn-one" disabled>Next</button>
                 </div>
             </div>
@@ -229,10 +233,11 @@
                 minDate: 0,
                 onSelect: function(dateText) {
                     selectedDate = dateText;
-                    const timeSlots = ['09:00', '10:00', '11:00', '14:00', '15:00'];
+                    $('#selected-date-heading').text(`Select Time for selected date ${selectedDate}`);
+                    const timeSlots = ['07:00 AM', '08:00 AM', '09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', '02:00 PM'];
                     let timeSlotsHtml = '';
                     timeSlots.forEach(time => {
-                        timeSlotsHtml += `<button class="btn btn-outline-primary time-slot-btn m-2">${time}</button>`;
+                        timeSlotsHtml += `<button class="time-slot-btn">${time}</button>`;
                     });
                     $('#time-slots').html(timeSlotsHtml);
                     checkSelections();
@@ -241,8 +246,8 @@
 
             $('#time-slots').on('click', '.time-slot-btn', function() {
                 selectedTime = $(this).text();
-                $('.time-slot-btn').removeClass('btn-primary').addClass('btn-outline-primary');
-                $(this).removeClass('btn-outline-primary').addClass('btn-primary');
+                $('.time-slot-btn').removeClass('selected');
+                $(this).addClass('selected');
                 checkSelections();
             });
 
