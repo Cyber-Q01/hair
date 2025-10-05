@@ -2,8 +2,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="description" content="Blessing Your Scalp is more than a salon; it's a community, a commitment to excellence, and a celebration of individuality through braided artistry. Join us on this journey of self-expression and self-care. Book your session, connect with us, and let Blessing and her team redefine your hairstyling experience .">
-    <title> - Blessing Your Scalp</title>
+    <meta name="description" content="Welly africa beauty is more than a salon; it's a community, a commitment to excellence, and a celebration of individuality through braided artistry. Join us on this journey of self-expression and self-care. Book your session, connect with us, and let Blessing and her team redefine your hairstyling experience .">
+    <title> -Welly afro beauty</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
@@ -45,6 +45,57 @@
     <!--End of Tawk.to Script-->
     <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
     <style>
+        /* Modal CSS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: #fbf4f0;
+            margin: 10% auto;
+            padding: 30px;
+            border: 1px solid #e19979;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            font-family: 'Jost', sans-serif;
+        }
+
+        .modal-content h2 {
+            color: #35312f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content p {
+            color: #8a8582;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .close {
+            color: #35312f;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #e19979;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
         .marked-date a .ui-state-default {
             background-color: #ffcccb !important;
             /* Highlight color */
@@ -530,7 +581,7 @@ display: none !important;
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                     <!-- <button type="submit" class="theme-btn-one">Pay Now »</button><br>
                                     <p>OR</p> -->
-                                    <button type="button" wire:click="save('deposit')" class="theme-btn-one">Pay £20 Deposit Now »</button><br>
+                                    <button type="button" id="payDepositBtn" wire:click="save('deposit')" class="theme-btn-one">Pay £20 Deposit Now »</button><br>
                                 </div>
                             </div>
                         </form>
@@ -616,7 +667,7 @@ display: none !important;
             <div class="footer-botton">
                 <div class="auto-container clearfix">
                     <div class="copyright pull-left">
-                        <p>© Copyright 2025 by <a href="/">Blessing Your Scalp</a></p>
+                        <p>© Copyright 2025 by <a href="/">Welly africa beauty</a></p>
                     </div>
 
                 </div>
@@ -656,7 +707,61 @@ display: none !important;
     <!-- main-js -->
     <script src="./assets/js/script.js"></script>
 
+    <!-- The Modal -->
+    <div id="paymentModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Secure Online Payment</h2>
+        <p><strong>Bank Transfer Details:</strong></p>
+        <p><strong>Account Name:</strong> WELLYBANS LTD</p>
+        <p><strong>Account Number:</strong> 63280472</p>
+        <p><strong>Sort Code:</strong> 08-92-50</p>
+        <p><strong>Payment Reference:</strong> [LastName]-[Service]-[Date]</p>
+        <p>Please use your surname, service type, and appointment date as the payment reference.</p>
+        <p><em>Payment must be completed within 24 hours to secure your appointment.</em></p>
+      </div>
+    </div>
+
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modal = document.getElementById("paymentModal");
+            var btn = document.getElementById("payDepositBtn");
+            var span = document.getElementsByClassName("close")[0];
+            var form = document.querySelector('.default-form');
+
+            if (btn) {
+                btn.onclick = function() {
+                    var inputs = form.querySelectorAll('input[required], select[required]');
+                    var allFilled = true;
+
+                    inputs.forEach(function(input) {
+                        if (!input.value) {
+                            allFilled = false;
+                        }
+                    });
+
+                    if (allFilled) {
+                        modal.style.display = "block";
+                    } else {
+                        alert("Please fill out all required fields before proceeding.");
+                    }
+                }
+            }
+
+            if (span) {
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+
         $(document).ready(function() {
             const urlParams = new URLSearchParams(window.location.search);
             const serviceId = urlParams.get('service_id');
