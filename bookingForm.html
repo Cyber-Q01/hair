@@ -27,22 +27,6 @@
     <link href="/assets/css/style.css" rel="stylesheet">
     <link href="/assets/css/responsive.css" rel="stylesheet">
     <!-- <link href="/assets/css/calendar.css" rel="stylesheet"> -->
-
-    <!--Start of Tawk.to Script-->
-    <script src="./scripts/twk-main.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-vendor.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-chunk-vendors.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-chunk-common.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-runtime.js" charset="UTF-8" crossorigin="*"></script><script src="./scripts/twk-app.js" charset="UTF-8" crossorigin="*"></script><script async src="/67fcce1b03705119092a6d7e/1iopoa7g8" charset="UTF-8" crossorigin="*"></script><script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/67fcce1b03705119092a6d7e/1iopoa7g8';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
     <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
     <style>
         /* Modal CSS */
@@ -135,6 +119,23 @@
                 padding-left: 200px;
             }
         }
+
+        .service-details-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .service-details-box p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .service-details-box p strong {
+            color: #333;
+        }
     </style>
 
 <style>/* Make clicks pass-through */
@@ -211,52 +212,7 @@
       0%   { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    /* </style><script charset="utf-8" src="./scripts/twk-chunk-2d0d2b7c.js"></script><script charset="utf-8" src="./scripts/twk-chunk-2d224aff.js"></script><script charset="utf-8" src="./scripts/twk-chunk-2d0aef27.js"></script><script charset="utf-8" src="./scripts/twk-chunk-2d0b383d.js"></script><script charset="utf-8" src="./scripts/twk-chunk-2d0da3af.js"></script><script charset="utf-8" src="./scripts/twk-chunk-4fe9d5dd.js"></script><script charset="utf-8" src="./scripts/twk-chunk-7941cc06.js"></script><script charset="utf-8" src="./scripts/twk-chunk-6289ff8e.js"></script><script charset="utf-8" src="./scripts/twk-chunk-2d0c8092.js"></script><style type="text/css">#eihjulgniu31759597972044 {outline:none !important;
-visibility:visible !important;
-resize:none !important;
-box-shadow:none !important;
-overflow:visible !important;
-background:none !important;
-opacity:1 !important;
-filter:alpha(opacity=100) !important;
--ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important;
--mz-opacity:1 !important;
--khtml-opacity:1 !important;
-top:auto !important;
-right:0px !important;
-bottom:0px !important;
-left:auto !important;
-position:fixed !important;
-border:0 !important;
-min-height:0px  !important;
-min-width:0px  !important;
-max-height:none  !important;
-max-width:none  !important;
-padding:0px !important;
-margin:0px !important;
--moz-transition-property:none !important;
--webkit-transition-property:none !important;
--o-transition-property:none !important;
-transition-property:none !important;
-transform:none !important;
--webkit-transform:none !important;
--ms-transform:none !important;
-width:auto !important;
-height:auto  !important;
-display:none !important;
-z-index:2000000000 !important;
-background-color:transparent !important;
-cursor:none !important;
-float:none !important;
-border-radius:unset !important;
-pointer-events:auto !important;
-clip:auto !important;
-color-scheme:light !important;}#eihjulgniu31759597972044.widget-hidden {display: none !important;}#eihjulgniu31759597972044.widget-visible {display: block !important;}
-@media print{
- #eihjulgniu31759597972044.widget-visible { 
-display: none !important;
- }
-}</style><style type="text/css">.tawk-button-hover[data-v-2fc2d95d]:focus,.tawk-button-hover[data-v-2fc2d95d]:hover{background-color:hsla(0,0%,100%,.2)!important;border-radius:5px!important}</style><style type="text/css">@keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-moz-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-webkit-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}#mcpa1lt9vir81759597972313.open{animation : tawkMaxOpen .25s ease!important;}@keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}@-moz-keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}@-webkit-keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}#mcpa1lt9vir81759597972313.closed{animation: tawkMaxClose .25s ease!important}</style><style type="text/css"> */
+  
                         .marked-date a {
                             background-color: #ffcccb !important; /* Highlight color */
                             color: #000 !important; /* Text color */
@@ -308,7 +264,7 @@ display: none !important;
         <!-- preloader end -->
 
         <!-- main header -->
-        <header class="main-header style-two fixed-header">
+         <header class="main-header style-two">
 
             <div class="auto-container">
                 <!-- header-upper -->
@@ -321,24 +277,8 @@ display: none !important;
                                 <a href="mailto: config('app.email') }}"> config('app.email') }}</a>
                             </div>
                         </div> -->
-                        <figure class="logo-box"><a href="/"><img src="./assets/images/logo-2.png" alt=""></a></figure>
-                        <div class="phone-box info-box">
-                            <div class="inner">
-                                
-                                <p>Phone</p>
-                                <a href="#">+4407578999140</a>
-                                <i class="flaticon-address"></i>
-                                <p class="mt-1"><a href="#">📍LOCATION :31 AGNES ROAD, BARNSLEY S70 1NJ</a></p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- header-lower -->
-                <div class="header-lower">
-                    <div class="outer-box">
-
-                        <div class="menu-area col-md-8 mx-auto">
+                        <figure class="logo-box"><a href="/"><img src="/assets/images/logo-2.png" alt=""></a></figure>
+                        <div class="menu-area">
                             <!--Mobile Navigation Toggler-->
                             <div class="mobile-nav-toggler">
                                 <i class="icon-bar"></i>
@@ -348,25 +288,41 @@ display: none !important;
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li>
+                                        <li
+                                            class="">
                                             <a href="https://55b558c7-site-preview.builder.hostafrica.com/home">Home</a>
                                         </li>
-                                        <li>
-                                            <a href="./about.html">About </a>
+                                        <li
+                                            class="">
+                                            <a href="/about.html">About </a>
                                         </li>
-                                        <li>
-                                            <a href="./service.html">Services</a>
+                                        <li
+                                            class="">
+                                            <a href="/service.html">Services</a>
                                         </li>
-                                        <li>
+                                        <li
+                                            class="">
                                             <a href="./booking.html">Booking</a>
                                         </li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="/#">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
+                        <div class="phone-box info-box">
+                            <div class="inner">
+                                
+                                <p>Phone</p>
+                                <a href="tel: config('app.phone')">+4407578999140</a>
+                                <i class="flaticon-address"></i>
+                                <p class="mt-1"><a href="#">📍LOCATION : 31 AGNES ROAD, BARNSLEY S70 1NJ</a></p>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- header-lower -->
+            
             </div>
 
             <!--sticky Header-->
@@ -376,24 +332,6 @@ display: none !important;
                         <div class="menu-area">
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->
-                            
-                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
-                                        <li>
-                                            <a href="https://55b558c7-site-preview.builder.hostafrica.com/home">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="./about.html">About </a>
-                                        </li>
-                                        <li>
-                                            <a href="./services.html">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="./booking.html">Booking</a>
-                                        </li>
-                                        <li><a href="/#">Contact</a></li>
-                                    </ul>
-                                </div>
                             </nav>
 
                         </div>
@@ -413,7 +351,7 @@ display: none !important;
                 <div class="menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 
-                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <!-- <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
                                         <li>
                                             <a href="https://55b558c7-site-preview.builder.hostafrica.com/home">Home</a>
@@ -429,7 +367,7 @@ display: none !important;
                                         </li>
                                         <li><a href="#">Contact</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
@@ -488,7 +426,7 @@ display: none !important;
                                 <div class="sec-title brown">
                                     <h2>Selected Service</h2>
                                 </div>
-                                <div id="selected-service-details">
+                                <div id="selected-service-details" class="service-details-box">
                                     <!-- Service details will be populated here by JavaScript -->
                                 </div>
                             </div>
@@ -724,7 +662,7 @@ display: none !important;
 <!-- <script src="./scripts/livewire.js" data-csrf="6cgxb4y9RRiIWGDwkF5FIXuYEgC68UGVL5CEiFHs" data-update-uri="/livewire/update" data-navigate-once="true"></script> -->
     <!-- main-js -->
     Welly
-
+    <script src="/assets/js/script.js"></script>
     <!-- The Modal -->
     <div id="paymentModal" class="modal">
       <!-- Modal content -->

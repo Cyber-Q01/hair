@@ -64,7 +64,9 @@
 		});
 
 		//Menu Toggle Btn
-		$('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function() {
+		$('.mobile-menu  .mobile-menu .close-btn').on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
 			$('body').removeClass('mobile-menu-visible');
 		});
 	}
@@ -198,7 +200,7 @@
 				$(this).next('.acc-content').slideDown(300);	
 			}
 		});	
-	}
+	}  
 
 
 	// banner-carousel

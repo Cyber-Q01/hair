@@ -513,6 +513,7 @@ img {
   -webkit-transition:all 500ms ease;
   -ms-transition:all 500ms ease;
   -o-transition:all 500ms ease;
+ 
 }
 
 .sticky-header{
@@ -1182,6 +1183,7 @@ img {
   opacity: 0;
   visibility: hidden;
   z-index: 999999;
+  background: #1f4f59;
 }
 
 .mobile-menu .navbar-collapse{
@@ -1242,11 +1244,11 @@ img {
   height: 100%;
   max-height: 100%;
   overflow-y: auto;
-  background: #202020;
+  /* background: transparent; */
   padding: 0px 0px;
-  z-index: 5;
+  z-index: 5000;
   opacity: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   border-radius: 0px;
   -webkit-transform: translateX(101%);
   -ms-transform: translateX(101%);
@@ -1268,12 +1270,12 @@ img {
 
 .mobile-menu .close-btn{
   position: absolute;
-  right: 25px;
-  top: 10px;
+  right: 35px;
+  top: 35px;
   line-height: 30px;
   width: 24px;
   text-align: center;
-  font-size: 16px;
+  font-size: 28px; /* Increased font size */
   color: #ffffff;
   cursor: pointer;
   z-index: 10;
@@ -1306,7 +1308,8 @@ img {
 .mobile-menu .navigation li{
   position: relative;
   display: block;
-  border-top: 1px solid rgba(255,255,255,0.10);
+  border-top: none; /* Removed border */
+  text-align: center; /* Centered text */
 }
 
 .mobile-menu .navigation:last-child{
@@ -1319,13 +1322,13 @@ img {
 
 .mobile-menu .navigation li > a{
   position: relative;
-  display: block;
+  display: inline-block; /* Changed to inline-block */
   line-height: 24px;
-  padding: 10px 25px;
-  font-size: 15px;
+  padding: 15px 0; /* Adjusted padding */
+  font-size: 18px; /* Increased font size */
   font-weight: 500;
   color: #ffffff;
-  text-transform: uppercase;
+  text-transform: capitalize; /* Changed to capitalize */
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   -ms-transition: all 500ms ease;
@@ -1342,19 +1345,23 @@ img {
 .mobile-menu .navigation li > a:before{
   content:'';
   position:absolute;
-  left:0;
-  top:0;
-  height:0;
-  border-left:5px solid #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 2px;
+  width: 25px;
+  background: #ffcc00;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
-  transition: all 500ms ease; 
+  transition: all 500ms ease;
+  opacity: 0;
 }
 
-.mobile-menu .navigation li.current > a:before{
-  height:100%;
+.mobile-menu .navigation li.current > a:before,
+.mobile-menu .navigation li:hover > a:before{
+  opacity: 1;
 }
 
 .mobile-menu .navigation li.dropdown .dropdown-btn{
