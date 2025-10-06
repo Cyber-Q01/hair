@@ -816,7 +816,7 @@ img {
 
 .main-menu .navigation > li.current > a,
 .main-menu .navigation > li:hover > a{
-  color: #35312f;
+  color: yellow;
 }
 
 .main-menu .navigation > li > ul,
@@ -3693,6 +3693,7 @@ div#mCSB_1_container{
 
 .main-header.style-two .main-menu .navigation > li > a{
   color: #fff;
+  
 }
 
 
@@ -5865,6 +5866,22 @@ div#mCSB_1_container{
 
 .contact-section .content-box .social-links li a:hover{
   color: #fff;
+}
+
+/* Custom Header Styles */
+.main-header.style-two .header-upper .upper-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header.style-two .main-menu .navigation > li > a:hover {
+  color: yellow;
+}
+
+/* Custom Radio Button Styles */
+input[type="radio"] {
+  accent-color: #35312f;
 }
 
 

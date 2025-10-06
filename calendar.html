@@ -225,6 +225,9 @@
         $(function() {
             const urlParams = new URLSearchParams(window.location.search);
             const serviceId = urlParams.get('service_id');
+            const serviceName = urlParams.get('service_name');
+            const subService = urlParams.get('sub_service');
+            const price = urlParams.get('price');
             let selectedDate = '';
             let selectedTime = '';
 
@@ -261,7 +264,8 @@
 
             $('#next-btn').on('click', function() {
                 if (serviceId && selectedDate && selectedTime) {
-                    window.location.href = `bookingForm.html?service_id=${serviceId}&date=${selectedDate}&time=${selectedTime}`;
+                    const url = `bookingForm.html?service_id=${serviceId}&service_name=${encodeURIComponent(serviceName)}&sub_service=${encodeURIComponent(subService)}&price=${price}&date=${selectedDate}&time=${selectedTime}`;
+                    window.location.href = url;
                 }
             });
         });

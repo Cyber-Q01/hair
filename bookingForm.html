@@ -479,7 +479,24 @@ display: none !important;
             <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
 
             <div id="step3"></div>
-            <!--[if BLOCK]><![endif]-->                <div class="row clearfix">
+            <!--[if BLOCK]><![endif]-->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details">
+                        <div class="inner-box">
+                            <div class="upper-box">
+                                <div class="sec-title brown">
+                                    <h2>Selected Service</h2>
+                                </div>
+                                <div id="selected-service-details">
+                                    <!-- Service details will be populated here by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
                 
                     <div class="comments-form-area">
                         <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
@@ -702,6 +719,7 @@ display: none !important;
     <script src="/assets/js/circle-progress.js"></script>
     <script src="/assets/js/jquery.countTo.js"></script>
     <script src="/assets/js/bxslider.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Livewire Scripts -->
 <script src="./scripts/livewire.js" data-csrf="6cgxb4y9RRiIWGDwkF5FIXuYEgC68UGVL5CEiFHs" data-update-uri="/livewire/update" data-navigate-once="true"></script>
     <!-- main-js -->
@@ -720,14 +738,26 @@ display: none !important;
         <p><strong>Payment Reference:</strong> [LastName]-[Service]-[Date]</p>
         <p>Please use your surname, service type, and appointment date as the payment reference.</p>
         <p><em>Payment must be completed within 24 hours to secure your appointment.</em></p>
+        <button type="button" id="sendEmailBtn" class="theme-btn-one" style="margin-top: 15px;">Confirm Booking</button>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close close-success">&times;</span>
+        <h2>Booking Successful!</h2>
+        <p>Your booking details have been recorded.</p>
       </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var modal = document.getElementById("paymentModal");
+            var successModal = document.getElementById("successModal");
             var btn = document.getElementById("payDepositBtn");
             var span = document.getElementsByClassName("close")[0];
+            var successSpan = document.getElementsByClassName("close-success")[0];
             var form = document.querySelector('.default-form');
 
             if (btn) {
@@ -755,18 +785,86 @@ display: none !important;
                 }
             }
 
+            if (successSpan) {
+                successSpan.onclick = function() {
+                    successModal.style.display = "none";
+                }
+            }
+
             window.onclick = function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
+                if (event.target == successModal) {
+                    successModal.style.display = "none";
+                }
             }
+
+            document.getElementById('sendEmailBtn').addEventListener('click', function() {
+                var sendButton = this;
+                sendButton.disabled = true;
+                sendButton.innerHTML = 'Sending...';
+                sendButton.style.cursor = 'not-allowed';
+
+                emailjs.init('u2jw77dCmPAS036WZ'); // Replace with your actual Public Key
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const serviceName = urlParams.get('service_name');
+                const subService = urlParams.get('sub_service');
+                const price = urlParams.get('price');
+
+                const templateParams = {
+                    customer_name: document.querySelector('input[wire\\:model="name"]').value,
+                    customer_email: document.querySelector('input[wire\\:model="email"]').value,
+                    customer_phone: document.querySelector('input[wire\\:model="phone"]').value,
+                    customer_instagram: document.querySelector('input[wire\\:model="instagram_handle"]').value,
+                    booking_date: document.getElementById('date') ? document.getElementById('date').value : 'N/A',
+                    booking_time: document.getElementById('time') ? document.getElementById('time').value : 'N/A',
+                    service_id: document.getElementById('service_id') ? document.getElementById('service_id').value : 'N/A',
+                    service_name: serviceName ? decodeURIComponent(serviceName) : 'N/A',
+                    sub_service: subService ? decodeURIComponent(subService) : 'N/A',
+                    price: price ? `£${price}` : 'N/A',
+                    hair_length: document.querySelector('select[wire\\:model="hair_length"]').value,
+                    hair_type: document.querySelector('select[wire\\:model="hair_type"]').value,
+                    deposit_info: 'The customer has been shown the bank details for the £20 deposit.',
+                    receipt_link: 'N/A' // You might want to add a field for this in your form
+                };
+
+                emailjs.send('service_jw31l46', 'template_5yf0lmm', templateParams)
+                    .then(function(response) {
+                       console.log('SUCCESS!', response.status, response.text);
+                       modal.style.display = "none";
+                       successModal.style.display = "block";
+                       sendButton.disabled = false;
+                       sendButton.innerHTML = 'Confirm Booking & Send Details';
+                       sendButton.style.cursor = 'pointer';
+                    }, function(error) {
+                       console.log('FAILED...', error);
+                       alert('Failed to send booking details. Please try again.');
+                       sendButton.disabled = false;
+                       sendButton.innerHTML = 'Confirm Booking & Send Details';
+                       sendButton.style.cursor = 'pointer';
+                    });
+            });
         });
 
         $(document).ready(function() {
             const urlParams = new URLSearchParams(window.location.search);
             const serviceId = urlParams.get('service_id');
+            const serviceName = urlParams.get('service_name');
+            const subService = urlParams.get('sub_service');
+            const price = urlParams.get('price');
             const date = urlParams.get('date');
             const time = urlParams.get('time');
+
+            if (serviceName && subService && price) {
+                const serviceDetailsHtml = `
+                    <p><strong>Service:</strong> ${decodeURIComponent(serviceName)}</p>
+                    <p><strong>Option:</strong> ${decodeURIComponent(subService)}</p>
+                    <p><strong>Price:</strong> £${price}</p>
+                `;
+                $('#selected-service-details').html(serviceDetailsHtml);
+            }
 
             if(serviceId) {
                 $('<input>').attr({
