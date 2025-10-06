@@ -4714,13 +4714,13 @@ div#mCSB_1_container{
 .page-title{
   position: relative;
   width: 100%;
-  padding: 187px 0px 145px 0px;
+  padding: 260px 0px 210px 0px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.page-title:before{
+/* .page-title:before{
   position: absolute;
   content: '';
   background: #35312f;
@@ -4730,7 +4730,7 @@ div#mCSB_1_container{
   top: 0px;
   right: 0px;
   opacity: 0.8;
-}
+} */
 
 .page-title .title-box{
   position: relative;

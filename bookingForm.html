@@ -729,7 +729,7 @@ display: none !important;
     <div id="paymentModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close">×</span>
         <h2>Secure Online Payment</h2>
         <p><strong>Bank Transfer Details:</strong></p>
         <p><strong>Account Name:</strong> WELLYBANS LTD</p>
@@ -737,7 +737,7 @@ display: none !important;
         <p><strong>Sort Code:</strong> 08-92-50</p>
         <p><strong>Payment Reference:</strong> [LastName]-[Service]-[Date]</p>
         <p>Please use your surname, service type, and appointment date as the payment reference.</p>
-        <p><em>Payment must be completed within 24 hours to secure your appointment.</em></p>
+        <p><em>Payment must be completed within 24 hours to secure your appointment. </em></p>
         <button type="button" id="sendEmailBtn" class="theme-btn-one" style="margin-top: 15px;">Confirm Booking</button>
       </div>
     </div>
@@ -745,9 +745,11 @@ display: none !important;
     <!-- Success Modal -->
     <div id="successModal" class="modal">
       <div class="modal-content">
-        <span class="close close-success">&times;</span>
+        <span class="close close-success">×</span>
         <h2>Booking Successful!</h2>
         <p>Your booking details have been recorded.</p>
+        <p>Your payment reference is: <strong id="paymentReference"></strong></p>
+        <button type="button" id="copyReferenceBtn" class="theme-btn-one" style="margin-top: 15px;">Copy Reference</button>
       </div>
     </div>
 
@@ -788,6 +790,7 @@ display: none !important;
             if (successSpan) {
                 successSpan.onclick = function() {
                     successModal.style.display = "none";
+                    form.reset();
                 }
             }
 
@@ -797,6 +800,7 @@ display: none !important;
                 }
                 if (event.target == successModal) {
                     successModal.style.display = "none";
+                    form.reset();
                 }
             }
 
@@ -834,6 +838,11 @@ display: none !important;
                     .then(function(response) {
                        console.log('SUCCESS!', response.status, response.text);
                        modal.style.display = "none";
+                       const lastName = document.querySelector('input[wire\\:model="name"]').value.split(' ').pop();
+                       const serviceName = urlParams.get('service_name') ? decodeURIComponent(urlParams.get('service_name')) : 'N/A';
+                       const date = document.getElementById('date') ? document.getElementById('date').value : 'N/A';
+                       const paymentReference = `${lastName}-${serviceName}-${date}`;
+                       document.getElementById('paymentReference').textContent = paymentReference;
                        successModal.style.display = "block";
                        sendButton.disabled = false;
                        sendButton.innerHTML = 'Confirm Booking & Send Details';
@@ -845,6 +854,15 @@ display: none !important;
                        sendButton.innerHTML = 'Confirm Booking & Send Details';
                        sendButton.style.cursor = 'pointer';
                     });
+            });
+
+            document.getElementById('copyReferenceBtn').addEventListener('click', function() {
+                const paymentReference = document.getElementById('paymentReference').textContent;
+                navigator.clipboard.writeText(paymentReference).then(function() {
+                    alert('Payment reference copied to clipboard!');
+                }, function(err) {
+                    console.error('Could not copy text: ', err);
+                });
             });
         });
 
