@@ -1246,7 +1246,8 @@ img {
   overflow-y: auto;
   /* background: transparent; */
   padding: 0px 0px;
-  z-index: 5000;
+  z-index: 5000
+  ;
   opacity: 0;
   /* visibility: hidden; */
   border-radius: 0px;
